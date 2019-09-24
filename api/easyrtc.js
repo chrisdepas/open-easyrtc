@@ -54,9 +54,8 @@ return {
   "badsocket": "Socket.io connect event fired with bad websocket.",
   "icf": "Internal communications failure",
   "statsNotSupported":"call statistics not supported by this browser, try Chrome.",
-   "noWebrtcSupport":"Your browser doesn't appear to support WebRTC.",
-   "gumFailed":"Failed to get access to local media. Error code was {0}.",
-   "requireAudioOrVideo":"At least one of audio and video must be provided"   
+  "noWebrtcSupport":"Your browser doesn't appear to support WebRTC.",
+  "gumFailed":"Failed to get access to local media. Error code was {0}."
 };
 
 }));
@@ -7946,11 +7945,6 @@ var Easyrtc = function() {
             };
             updateConfigurationInfo();
         };
-
-        if (!self.audioEnabled && !self.videoEnabled) {
-            onUserMediaError(self.getConstantString("requireAudioOrVideo"));
-            return;
-        }
 
         function getCurrentTime() {
             return (new Date()).getTime();

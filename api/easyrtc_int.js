@@ -2387,11 +2387,6 @@ var Easyrtc = function() {
             updateConfigurationInfo();
         };
 
-        if (!self.audioEnabled && !self.videoEnabled) {
-            onUserMediaError(self.getConstantString("requireAudioOrVideo"));
-            return;
-        }
-
         function getCurrentTime() {
             return (new Date()).getTime();
         }
